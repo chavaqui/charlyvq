@@ -1,0 +1,33 @@
+.nav-link {
+  cursor: pointer;
+}
+.custom-hover-icon {
+  cursor: pointer;
+}
+.navbar .nav-item .nav-link {
+  transition: color 0.2s ease; /* Agrega una transición suave al color */
+}
+.nav-link:hover {
+  color: #CF1B1B !important;
+  scale: 1.1;
+}
+.custom-height-header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  height: 60px;
+}
+.custom-active-navbar {
+  border-bottom: 2px solid #CF1B1B;
+}
+.custom-height-header-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  height:60px;
+}
+.custom-height-navbar-secondary {
+  height: 60px;
+}

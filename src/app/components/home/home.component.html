@@ -1,0 +1,240 @@
+<div class="container-fluid p-0">
+  <div class="header">
+    <app-header (eventChildToFather)="getSectionIdToScroll($event)"
+                (eventChildChangeTheme)="getChangedTheme()"
+                [parentActiveSection]="activeSection"
+                [parentWidthScreen]="screenWidth"></app-header>
+  </div>
+  <section id="sectionHome">
+    <div class="custom-canvas-size">
+      <div class="parent-container">
+        <div class="">
+          <app-p5sketch [colorBackground]="themeLighter"></app-p5sketch>
+        </div>
+        <div class="bg-transparent content-container"
+             [ngClass]="{'custom-bg-black': !themeLighter, 'custom-bg-lighter': themeLighter}">
+          <div class="">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-6">
+                <div [ngStyle]="{'height': screenWidth>768?'80vh':'40vh'}"
+                     class="d-flex flex-column align-items-end justify-content-center">
+                  <div class="col-8 d-flex flex-column">
+                    <span class="custom-font-size m-0"
+                          [ngClass]="{'custom-font-white': !themeLighter, 'custom-font-dark': themeLighter}">Hi,</span>
+                    <span class="custom-font-size m-0"
+                          [ngClass]="{'custom-font-white': !themeLighter, 'custom-font-dark': themeLighter}">I'm <span
+                      class="custom-red-color">Charly</span></span>
+                    <span class="custom-font-size mb-3"
+                          [ngClass]="{'custom-font-white': !themeLighter, 'custom-font-dark': themeLighter}">
+                          Frontend Developer</span>
+                  </div>
+                  <div class="col-8 d-flex flex-column align-items-start justify-content-center">
+                    <button class="btn custom-bg-red-color"><span>Contact</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-6">
+                <div [ngStyle]="{'height': screenWidth>768?'80vh':'40vh'}"
+                     class="d-flex align-items-center justify-content-center">
+                  <img *ngIf="screenWidth>=1200" [ngSrc]="'chav.jpg'" alt=""
+                       [height]="400 / 1.01" [width]="580"
+                       class="rounded-4 object-fit-cover">
+                  <img *ngIf="screenWidth>768 && screenWidth<1200" [ngSrc]="'chav.jpg'"
+                       alt="" [height]="340 / 1.01" [width]="340"
+                       class="rounded-start-circle border border-dark-subtle img-fluid">
+                  <img *ngIf="screenWidth<=768" [ngSrc]="'chav.jpg'" alt="" [height]="178 / 1.01" [width]="178"
+                       class="rounded-circle border border-secondary img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="custom-width-half d-flex align-items-start justify-content-center"
+                   style="height: 20vh">
+                  <div class="ms-4 mt-3">
+                    <i class="fab fa-github fa-2x" title="Github"
+                       [ngClass]="{'custom-icons-font-white': !themeLighter, 'custom-icons-font-dark': themeLighter}"></i>
+                  </div>
+                  <div class="ms-4 mt-3">
+                    <i class="fab fa-linkedin fa-2x" title="LinkedIn"
+                       [ngClass]="{'custom-icons-font-white': !themeLighter, 'custom-icons-font-dark': themeLighter}"></i>
+                  </div>
+                  <div class="ms-4 mt-3">
+                    <i class="fab fa-facebook fa-2x" title="Facebook"
+                       [ngClass]="{'custom-icons-font-white': !themeLighter, 'custom-icons-font-dark': themeLighter}"></i>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  Noteworthy  -->
+  <section id="sectionNoteworthy">
+    <div class="container-fluid pt-3 pb-5"
+         [ngClass]="{'custom-bg-black': !themeLighter, 'custom-bg-lighter': themeLighter}">
+      <h2 class="text-center custom-red-color-noteworthy mb-3 pb-3">Noteworthy</h2>
+      <div class="container custom-container-cards">
+        <ngb-carousel [ngClass]="{'': !themeLighter, 'carousel-dark': themeLighter}">
+          <ng-template ngbSlide>
+            <div class="custom-center-card p-5">
+              <div class="card custom-card-noteworthy shadow">
+                <div class="card-body">
+                  <div class="card border border-0">
+                    <img class="card-img" src="chav.jpg" alt="picture-noteworthy">
+                  </div>
+                  <h4 class="card-text">esto</h4>
+                  <p>This is the description space</p>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="custom-center-card p-5">
+              <div class="card custom-card-noteworthy shadow">
+                <div class="card-body">
+                  <div class="card border border-0">
+                    <img class="card-img" src="chav.jpg" alt="picture-noteworthy">
+                  </div>
+                  <h4 class="card-text">TITLE 2</h4>
+                  <p>This desctiption asmr sounds like everything is going to be better soon, Don't doubt</p>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="custom-center-card p-5">
+              <div class="card custom-card-noteworthy shadow">
+                <div class="card-body">
+                  <div class="card border border-0">
+                    <img class="card-img" src="chav.jpg" alt="picture-noteworthy">
+                  </div>
+                  <h4 class="card-text">TITLE 3</h4>
+                  <p>This amazing like everything is going to be better soon, Don't doubt</p>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+  </section>
+  <!--  About  -->
+  <section id="sectionAbout">
+    <div class="container-fluid pt-3 pb-5"
+         [ngClass]="{'custom-bg-black': !themeLighter, 'custom-bg-lighter': themeLighter}">
+      <h2 class="text-center custom-red-color mb-3">About</h2>
+      <div class="col-12 d-flex align-items-center justify-content-center">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center justify-content-center">
+            <div class="card card-about custom-bg-image-card mt-3">
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center justify-content-center">
+            <div class="card col-12 col-sm-6 col-md-6 col-lg-6 border-0 bg-transparent">
+              <div class="card-body">
+                <h3 class="text-start card-title mb-3"
+                    [ngClass]="{'custom-font-white': !themeLighter, 'custom-font-dark': themeLighter}">
+                  Hello
+                </h3>
+                <p class="card-text"
+                   [ngClass]="{'custom-font-white': !themeLighter, 'custom-font-dark': themeLighter}">
+                  Hard working software engineering student from Zenica in my
+                  third
+                  and final
+                  year. I'm also a former Pharmacy technician and a future full stack developer. I’ve found my passion
+                  in web development. I love spending time coding and encountering new challenges. I’m highly
+                  adaptable
+                  to new challenges and projects. I'm a Junior Scholar at Bosnia and Herzegovina Futures foundation
+                  and that is the best thing that happened to me.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--    skills-->
+  <section id="sectionSkills">
+    <div class="container-fluid pb-5 pt-3"
+         [ngClass]="{'custom-bg-black': !themeLighter, 'custom-bg-lighter': themeLighter}">
+      <h2 class="text-center custom-red-color-skills mb-3 pb-3">Skills</h2>
+      <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+          <div class="row">
+            <div
+              class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex flex-column align-items-center justify-content-center"
+              [ngClass]="{'custom-font-white': !themeLighter, 'custom-font-dark': themeLighter}">
+              <div class="custom-border-bottom w-75 text-center">
+                <i class="fa-brands fa-js fa-1x mt-3 mb-3 custom-icons-effect custom-color-javascript">
+                  <span class=" ms-2">JAVASCRIPT</span></i>
+              </div>
+              <div class="custom-border-bottom w-75 text-center">
+                <i class="fa-brands fa-angular fa-1x mt-3 mb-3 custom-icons-effect custom-color-angular">
+                  <span class="ms-2">ANGULAR</span></i>
+              </div>
+              <div class="custom-border-bottom w-75 text-center">
+                <i class="fa-brands fa-react fa-1x mt-3 mb-3 custom-icons-effect custom-color-react">
+                  <span class="ms-2">REACT</span></i>
+              </div>
+              <div class="custom-border-bottom w-75 text-center">
+                <i class="fa-brands fa-git-alt fa-1x mt-3 mb-3 custom-icons-effect custom-color-git">
+                  <span class="ms-2">GIT</span></i>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex flex-column align-items-center justify-content-center"
+              [ngClass]="{'custom-font-white': !themeLighter, 'custom-font-dark': themeLighter}">
+              <div class="custom-border-bottom w-75 text-center">
+                <i class="fa-brands fa-node fa-1x mt-3 mb-3 custom-icons-effect custom-color-nodejs">
+                  <span class="ms-2">NODE JS</span></i>
+              </div>
+              <div class="custom-border-bottom w-75 text-center">
+                <i class="fa-brands fa-cuttlefish fa-1x mt-3 mb-3 custom-icons-effect custom-color-cplusplus">++
+                  <span class="ms-2"></span></i>
+              </div>
+              <div class="custom-border-bottom w-75 text-center">
+                <i class="fa-brands fa-java fa-1x mt-3 mb-3 custom-icons-effect custom-color-java">
+                  <span class="ms-2">JAVA</span></i>
+              </div>
+              <div class="custom-border-bottom w-75 text-center">
+                <i class="fa-brands fa-html5 fa-1x mt-3 mb-3 custom-icons-effect custom-color-html">
+                  <span class="ms-2">HTML / CSS</span></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  Contact  -->
+  <section id="sectionContact">
+    <div class="container-fluid pt-3 pb-5"
+         [ngClass]="{'custom-bg-black': !themeLighter, 'custom-bg-lighter': themeLighter}">
+      <h2 class="text-center custom-red-color-contact mb-3 pb-3">Contact</h2>
+      <div class="col-12 d-flex flex-column align-items-center justify-content-center">
+        <div class="m-3">
+          <input type="text" class="form-control" placeholder="Name">
+        </div>
+        <div class="m-3">
+          <input type="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="m-3">
+          <textarea class="form-control" cols="21" rows="10" placeholder="Message"></textarea>
+        </div>
+      </div>
+      <div class="d-flex align-items-center justify-content-center pb-5">
+        <button class="btn custom-bg-red-color"><span>Send</span></button>
+      </div>
+    </div>
+    <h1>adwadw</h1>
+    <h1>adwadw</h1>
+    <h1>adwadw</h1>
+    <h1>adwadw</h1>
+    <h1>adwadw</h1>
+  </section>
+  <!--  </div>-->
+  <div class="footer">
+    <app-footer></app-footer>
+  </div>
+</div>

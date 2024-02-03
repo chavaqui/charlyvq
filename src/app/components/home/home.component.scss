@@ -1,0 +1,196 @@
+.custom-height {
+  height: 80vh;
+}
+
+h2.custom-red-color::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #CF1B1B;
+  width: 76px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+h2.custom-red-color-contact::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #CF1B1B;
+  width: 106px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+h2.custom-red-color-skills::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #CF1B1B;
+  width: 64px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+h2.custom-red-color-noteworthy::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #CF1B1B;
+  width: 160px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.custom-border-bottom {
+  border-bottom: 2px solid #d20a0a;
+}
+
+.custom-font-size {
+  font-size: 50px;
+  font-weight: 700;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
+
+.pentagon-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  //clip-path: polygon(200px 0px, 400px 152px,328px 400px, 72px 400px, 0px 152px);
+}
+
+.pentagon-container:hover {
+  rotate: 5deg;
+}
+
+.custom-height-photo {
+  max-width: 100%;
+  height: auto; //poner alturas custom como el css de texto -revisar
+}
+
+.custom-box-image {
+  //height: 540px;
+  //width: 540px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.custom-bg-image-card {
+  width: 300px;
+  height: 400px;
+  border-radius: 25rem;
+  background-image: url('/assets/chav.jpg');
+  background-size: cover;
+
+  @media (max-width: 768px) {
+    width: 240px;
+    height: 320px;
+    border-radius: 8px;
+    background-image: url('/assets/chav.jpg');
+    background-size: cover;
+  }
+
+  @media (max-width: 576px) {
+    width: 180px;
+    height: 240px;
+    border-radius: 6px;
+    background-image: url('/assets/chav.jpg');
+    background-size: cover;
+  }
+}
+
+.parent-container {
+  position: relative;
+  width: 100%; /* ajustar según tus necesidades */
+  height: 100%; /* ajustar según tus necesidades */
+}
+
+.content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.20); /* Fondo completamente transparente */
+
+}
+
+.custom-canvas-size {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.card-about {
+  padding: 4px;
+  //margin: 18px;
+  border-radius: 10px;
+  //background-color: #3f3f3f;
+}
+
+.custom-width-half {
+  width: 50%;
+}
+
+.custom-card-noteworthy {
+  width: 500px;
+  height: auto;
+  background-color: #151515;
+  border: 1px solid #313131 !important; /* Color celeste neon */
+  border-radius: 5px; /* Ajusta según tus preferencias */
+  color: #f6f5f1; /* Texto blanco para contraste */
+}
+
+.custom-container-cards {
+  max-width: 700px;
+  margin: auto;
+}
+
+.custom-center-card {
+  //height: 680px; revisar en mobiel se ahce muy largo
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.custom-color-javascript::before {
+  color: #edd71d;
+  font-size: 1.5em;
+}
+.custom-color-angular::before {
+  color: #d5002f;
+  font-size: 1.5em;
+}
+.custom-color-react::before {
+  color: #087da3;
+  font-size: 1.5em;
+}
+.custom-color-git::before {
+  color: #e74e31;
+  font-size: 1.5em;
+}
+.custom-color-nodejs::before {
+  color: #74a863;
+  font-size: 1.5em;
+}
+.custom-color-cplusplus::before {
+  color: #6294ca;
+  font-size: 1.5em;
+}
+.custom-color-java::before {
+  color: #f6db2f;
+  font-size: 1.5em;
+}
+.custom-color-html::before {
+  color: #e86228;
+  font-size: 1.5em;
+}
+

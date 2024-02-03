@@ -1,0 +1,91 @@
+<div class="container-fluid">
+  <div *ngIf="parentWidthScreen>991" class="row">
+    <nav
+      class="navbar-my-header custom-height-header navbar navbar-expand-lg navbar-light custom-bg-header py-0">
+      <div class="col-5 d-flex align-items-center justify-content-center">
+        <nav class="navbar">
+          <a class="navbar-brand custom-hover-icon" (click)="sendSectionToFather('sectionHomeIcon')">
+            <i class="fa fa-meteor text-warning fa-2x "><span class="">.</span></i>
+          </a>
+        </nav>
+      </div>
+      <div class="col-7 d-flex align-items-center justify-content-center">
+          <div class="navbar collapse navbar-collapse d-flex align-items-center justify-content-end me-3"
+               id="navbarNavDropdown">
+            <ul class="nav">
+              <li class="nav-item"
+                  [class.custom-active-navbar]="parentActiveSection === 'sectionHome'">
+                <a class="nav-link custom-font-white" (click)="sendSectionToFather('sectionHome')"
+                   data-toggle="" data-offset="56">Home</a>
+              </li>
+              <li class="nav-item"
+                  [class.custom-active-navbar]="parentActiveSection === 'sectionNoteworthy'">
+                <a class="nav-link custom-font-white"
+                   data-toggle="" data-offset="56" (click)="sendSectionToFather('sectionNoteworthy')">Noteworthy</a>
+              </li>
+              <li class="nav-item"
+                  [class.custom-active-navbar]="parentActiveSection === 'sectionAbout'">
+                <a class="nav-link custom-font-white" (click)="sendSectionToFather('sectionAbout')"
+                   >About</a>
+              </li>
+              <li class="nav-item"
+                  [class.custom-active-navbar]="parentActiveSection === 'sectionSkills'">
+                <a class="nav-link custom-font-white" (click)="sendSectionToFather('sectionSkills')">Skills</a>
+              </li>
+              <li class="nav-item"
+                  [class.custom-active-navbar]="parentActiveSection === 'sectionContact'">
+                <a class="nav-link custom-font-white" (click)="sendSectionToFather('sectionContact')">Contact</a>
+              </li>
+            </ul>
+          </div>
+        <div class="">
+          <button class="btn btn-outline-secondary me-4" title="Change theme" (click)="sendChangeTheme()">
+            <i class="fa" [ngClass]="{'fa-moon text-info': themeSwitchWhite, 'fa-sun text-warning': !themeSwitchWhite}"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div *ngIf="parentWidthScreen<=991" class="row">
+    <nav class="navbar custom-bg-header navbar-my-header custom-height-header-mobile">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand custom-hover-icon" (click)="sendSectionToFather('sectionHomeIcon')">
+          <i class="fa fa-meteor text-warning fa-2x ms-4"><span class="">.</span></i>
+        </a>
+        <!-- Button change theme -->
+        <a class="navbar-brand"><button class="btn btn-outline-secondary ms-2" title="Change theme" (click)="sendChangeTheme()">
+          <i class="fa" [ngClass]="{'fa-moon text-info': themeSwitchWhite, 'fa-sun text-warning': !themeSwitchWhite}"></i>
+        </button></a>
+        <!-- Button menu for mobile devices -->
+        <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Content toggle -->
+        <div class="collapse navbar-collapse custom-bg-header" id="navbarSupportedContent">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item">
+              <a class="nav-link custom-font-white" (click)="sendSectionToFather('sectionHome')"
+                 data-toggle="" data-offset="">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-font-white"
+                 data-toggle="" data-offset="" (click)="sendSectionToFather('sectionNoteworthy')">Noteworthy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-font-white" (click)="sendSectionToFather('sectionAbout')">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-font-white" (click)="sendSectionToFather('sectionSkills')">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-font-white" (click)="sendSectionToFather('sectionContact')">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
