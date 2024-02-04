@@ -75,8 +75,6 @@ h2.custom-red-color-noteworthy::after {
 }
 
 .custom-box-image {
-  //height: 540px;
-  //width: 540px;
   width: 100%;
   height: 100%;
   position: relative;
@@ -159,6 +157,9 @@ h2.custom-red-color-noteworthy::after {
   display: flex;
   align-content: center;
   justify-content: center;
+}
+i {
+  transition: scale 0.2s ease;
 }
 
 .custom-color-javascript::before {
