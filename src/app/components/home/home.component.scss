@@ -84,27 +84,30 @@ h2.custom-red-color-noteworthy::after {
 }
 
 .custom-bg-image-card {
+  margin: 0;
+  padding: 0;
+  border: none;
   width: 300px;
   height: 400px;
   border-radius: 25rem;
-  background-image: url('/assets/chav.jpg');
-  background-size: cover;
 
   @media (max-width: 768px) {
     width: 240px;
     height: 320px;
     border-radius: 8px;
-    background-image: url('/assets/chav.jpg');
-    background-size: cover;
   }
 
   @media (max-width: 576px) {
     width: 180px;
     height: 240px;
     border-radius: 6px;
-    background-image: url('/assets/chav.jpg');
-    background-size: cover;
   }
+}
+
+.custom-image-fit {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .parent-container {
@@ -130,10 +133,7 @@ h2.custom-red-color-noteworthy::after {
 }
 
 .card-about {
-  padding: 4px;
-  //margin: 18px;
   border-radius: 10px;
-  //background-color: #3f3f3f;
 }
 
 .custom-width-half {
@@ -145,8 +145,8 @@ h2.custom-red-color-noteworthy::after {
   height: auto;
   background-color: #151515;
   border: 1px solid #313131 !important; /* Color celeste neon */
-  border-radius: 5px; /* Ajusta según tus preferencias */
-  color: #f6f5f1; /* Texto blanco para contraste */
+  border-radius: 5px;
+  color: #f6f5f1;
 }
 
 .custom-container-cards {
