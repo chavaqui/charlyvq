@@ -1,5 +1,21 @@
 import {Component, ElementRef, HostListener} from '@angular/core';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {SendEmailService} from "../../services/send-email.service";
+import {Observable} from "rxjs";
+import {logMessages} from "@angular-devkit/build-angular/src/tools/esbuild/utils";
 
+interface responseBodyMessage {
+  data: {
+    name: string,
+    email: string,
+    message: string,
+  }
+}
+interface bodyMessage {
+    name: string,
+    email: string,
+    message: string,
+}
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,9 +26,45 @@ export class HomeComponent {
   screenWidth: number = 0;
   sectionId = '';
   activeSection = 'sectionHome';
+  shakeAnimation= false;
+  statusSendMessage = false;
+  contactForm: FormGroup = new FormGroup({
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    message: new FormControl('', Validators.required)
+  })
 
-  constructor(private elemRef: ElementRef) {
+  constructor(private elemRef: ElementRef,
+              private serviceContact: SendEmailService) {
     this.screenWidth = window.innerWidth;
+  }
+
+  async sendMessage() {
+    if (!this.contactForm.valid) {
+      this.shakeAnimationEffect();
+      this.contactForm.markAllAsTouched();
+      console.log('form is not valid :D');
+    } else {
+      this.sendMessageToBackend();
+    }
+  }
+  sendMessageToBackend() {
+    const bodyMessage = this.contactForm.value;
+    this.serviceContact.connectionToBackend(bodyMessage).subscribe(
+      data => {
+        if (data.success) {
+          this.contactForm.reset()
+          this.statusSendMessage = true;
+        }
+        console.log('received from backend:',data)
+      }
+    )
+  }
+  shakeAnimationEffect() {
+    this.shakeAnimation = true;
+    setTimeout(() => {
+      this.shakeAnimation = false;
+    },400)
   }
 
   @HostListener('window:resize', ['$event'])

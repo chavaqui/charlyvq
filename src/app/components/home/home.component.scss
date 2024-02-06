@@ -161,6 +161,9 @@ h2.custom-red-color-noteworthy::after {
 i {
   transition: scale 0.2s ease;
 }
+.custom-alert-container {
+  height: 64px;
+}
 
 .custom-color-javascript::before {
   color: #edd71d;
