@@ -43,7 +43,6 @@ export class HomeComponent {
     if (!this.contactForm.valid) {
       this.shakeAnimationEffect();
       this.contactForm.markAllAsTouched();
-      console.log('form is not valid :D');
     } else {
       this.sendMessageToBackend();
     }
@@ -56,7 +55,6 @@ export class HomeComponent {
           this.contactForm.reset()
           this.statusSendMessage = true;
         }
-        console.log('received from backend:',data)
       }
     )
   }
@@ -101,9 +99,7 @@ export class HomeComponent {
   getSectionIdToScroll(dataSectionId: string) {
     this.sectionId = dataSectionId;
     const navbarHeight = this.elemRef.nativeElement.querySelector('.navbar-my-header').offsetHeight;
-    console.log('navbar height:', navbarHeight)
     const myNavbarOpen = this.elemRef.nativeElement.querySelector('.navbar-collapse');
-    console.log('navbar height-collapse:', myNavbarOpen.offsetHeight)
     if (dataSectionId === 'sectionHomeIcon') { // Icon go home
       const currentSectionIcon = document.querySelector('#sectionHome');
       if (currentSectionIcon) {
@@ -123,7 +119,6 @@ export class HomeComponent {
             top: newPosition,
             behavior: 'smooth'
           });
-          console.log('is not open', navbarHeight)
         } else { // Scroll to section mobile
           this.elemRef.nativeElement.querySelector('.navbar-toggler').click(); //closes the navbar toggle when clicked
           const newPosition = currentSection.getBoundingClientRect().top + window.scrollY - navbarHeight;
@@ -131,7 +126,6 @@ export class HomeComponent {
             top: newPosition,
             behavior: 'smooth'
           });
-          console.log('is opened')
         }
       }
     }

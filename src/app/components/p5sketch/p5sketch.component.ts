@@ -21,7 +21,6 @@ export class P5sketchComponent implements OnInit, OnChanges, OnDestroy {
   }
   ngOnChanges(changes: SimpleChanges) {
     if (changes['colorBackground']) {
-    console.log('valor cambiado',this.colorBackground)
       if (this.colorBackground) {
         this.colorRed = 238;
         this.colorGreen = 239;
@@ -181,7 +180,6 @@ export class P5sketchComponent implements OnInit, OnChanges, OnDestroy {
       if (p.windowWidth>940) {
         p.resizeCanvas(p.windowWidth, p.windowHeight);
         // p.resizeCanvas(p.windowWidth, p.windowHeight,true);
-        console.log('values truex:',p.windowWidth,p.windowHeight)
       }
     }
 
