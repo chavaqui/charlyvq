@@ -28,7 +28,13 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/chav.jpg"
+              "src/chav.jpg",
+              "src/portCer1.webp",
+              "src/portCer2.webp",
+              "src/portCer3.webp",
+              "src/certificationAngular3.webp",
+              "src/scp1.webp"
+
             ],
             "styles": [
               "src/styles.scss",

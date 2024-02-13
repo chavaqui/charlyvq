@@ -78,45 +78,49 @@
       <h2 class="text-center custom-red-color-noteworthy mb-3 pb-3">Noteworthy</h2>
       <div class="container custom-container-cards">
         <ngb-carousel [ngClass]="{'': !themeLighter, 'carousel-dark': themeLighter}">
-          <ng-template ngbSlide>
-            <div class="custom-center-card p-5">
-              <div class="card custom-card-noteworthy shadow">
-                <div class="card-body">
-                  <div class="card border border-0">
-                    <img class="card-img" src="chav.jpg" alt="picture-noteworthy">
-                  </div>
-                  <h4 class="card-text">esto</h4>
-                  <p>This is the description space</p>
-                </div>
-              </div>
-            </div>
+          <ng-template ngbSlide *ngFor="let slide of slides">
+            <app-card-slider [slide]="slide"
+                              [themeLighter]="themeLighter"></app-card-slider>
           </ng-template>
-          <ng-template ngbSlide>
-            <div class="custom-center-card p-5">
-              <div class="card custom-card-noteworthy shadow">
-                <div class="card-body">
-                  <div class="card border border-0">
-                    <img class="card-img" src="chav.jpg" alt="picture-noteworthy">
-                  </div>
-                  <h4 class="card-text">TITLE 2</h4>
-                  <p>This desctiption asmr sounds like everything is going to be better soon, Don't doubt</p>
-                </div>
-              </div>
-            </div>
-          </ng-template>
-          <ng-template ngbSlide>
-            <div class="custom-center-card p-5">
-              <div class="card custom-card-noteworthy shadow">
-                <div class="card-body">
-                  <div class="card border border-0">
-                    <img class="card-img" src="chav.jpg" alt="picture-noteworthy">
-                  </div>
-                  <h4 class="card-text">TITLE 3</h4>
-                  <p>This amazing like everything is going to be better soon, Don't doubt</p>
-                </div>
-              </div>
-            </div>
-          </ng-template>
+<!--          <ng-template ngbSlide>-->
+<!--            <div class="custom-center-card p-5">-->
+<!--              <div class="card custom-card-noteworthy shadow">-->
+<!--                <div class="card-body">-->
+<!--                  <div class="card border border-0">-->
+<!--                    <img class="card-img" src="chav.jpg" alt="picture-noteworthy">-->
+<!--                  </div>-->
+<!--                  <h4 class="card-text">esto</h4>-->
+<!--                  <p>This is the description space</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </ng-template>-->
+<!--          <ng-template ngbSlide>-->
+<!--            <div class="custom-center-card p-5">-->
+<!--              <div class="card custom-card-noteworthy shadow">-->
+<!--                <div class="card-body">-->
+<!--                  <div class="card border border-0">-->
+<!--                    <img class="card-img" src="portCer1.webp" alt="picture-noteworthy" >-->
+<!--                  </div>-->
+<!--                  <h4 class="card-text">TITLE 2</h4>-->
+<!--                  <p>This desctiption asmr sounds like everything is going to be better soon, Don't doubt</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </ng-template>-->
+<!--          <ng-template ngbSlide>-->
+<!--            <div class="custom-center-card p-5">-->
+<!--              <div class="card custom-card-noteworthy shadow">-->
+<!--                <div class="card-body">-->
+<!--                  <div class="card border border-0">-->
+<!--                    <img class="card-img" src="chav.jpg" alt="picture-noteworthy">-->
+<!--                  </div>-->
+<!--                  <h4 class="card-text">TITLE 3</h4>-->
+<!--                  <p>This amazing like everything is going to be better soon, Don't doubt</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </ng-template>-->
         </ngb-carousel>
       </div>
     </div>
@@ -144,14 +148,12 @@
                 </h3>
                 <p class="card-text"
                    [ngClass]="{'custom-font-white': !themeLighter, 'custom-font-dark': themeLighter}">
-                  Hard working software engineering student from Zenica in my
-                  third
-                  and final
-                  year. I'm also a former Pharmacy technician and a future full stack developer. I’ve found my passion
-                  in web development. I love spending time coding and encountering new challenges. I’m highly
-                  adaptable
-                  to new challenges and projects. I'm a Junior Scholar at Bosnia and Herzegovina Futures foundation
-                  and that is the best thing that happened to me (changed).</p>
+                  Hard working software engineering student from Peru with finished studies at UNSAAC university.
+                  I love spending time coding and encountering new challenges in web development, I'm also
+                  enthusiastic fan of AI technologies.
+
+                  I’m highly adaptable to new challenges and projects. I'm part of a small startup team in my city, looking for new
+                  opportunities and growing with confidence.</p>
               </div>
             </div>
           </div>

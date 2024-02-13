@@ -28,6 +28,11 @@ export class HomeComponent {
   activeSection = 'sectionHome';
   shakeAnimation= false;
   statusSendMessage = false;
+  slides = [
+    { imageSrc: 'scp1.webp', title: 'Smart Cities Peru', description: 'Worked as Frontend developer, with technologies as Angular, Git and Linux.' },
+    { imageSrc: 'portCer1.webp', title: '2nd place Startup competition', description: 'Recognized for innovation and social impact.' },
+    { imageSrc: 'certificationAngular3.webp', title: 'Angular certification', description: 'I have succesfully finished a course with Angular technologies.' }
+  ];
   contactForm: FormGroup = new FormGroup({
     name: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),

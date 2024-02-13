@@ -10,6 +10,7 @@ import {NgOptimizedImage} from "@angular/common";
 import { P5sketchComponent } from './components/p5sketch/p5sketch.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { CardSliderComponent } from './components/card-slider/card-slider.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {HttpClientModule} from "@angular/common/http";
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    P5sketchComponent
+    P5sketchComponent,
+    CardSliderComponent
   ],
     imports: [
         BrowserModule,

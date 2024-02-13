@@ -1,0 +1,40 @@
+
+.custom-card-noteworthy {
+  max-width: 600px;
+  max-height: 450px;
+  height: auto;
+  background-color: #151515;
+  border: 1px solid #313131 !important; /* Color celeste neon */
+  border-radius: 5px;
+  contain: paint;
+  color: #f6f5f1;
+}
+.custom-expand-img {
+  contain: paint;
+}
+.img-container {
+  width: 100%;
+  height: 480px;
+  background-color: #087da3;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 900px) {
+    width: 100%;
+    height: 280px;
+    background-color: #a36008;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+  }
+}
+.container-x {
+  text-align: center;
+  padding: 10px 20px;
+}
+.card-img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}

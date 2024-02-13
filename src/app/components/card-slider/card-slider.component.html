@@ -1,0 +1,22 @@
+<!-- app-slide.component.html -->
+<div class="custom-center-card p-5">
+  <div class="img-container">
+    <img [src]="slide.imageSrc" alt="adw" class="card-img">
+  </div>
+    <div class="container-x">
+      <h4 class="card-text" [ngClass]="{'custom-font-white': !themeLighter, 'custom-font-dark': themeLighter}">{{ slide.title }}</h4>
+      <p [ngClass]="{'custom-font-white': !themeLighter, 'custom-font-dark': themeLighter}">{{ slide.description }}</p>
+    </div>
+  <!--<div class="card custom-card-noteworthy shadow">
+    <img class="img-fluid custom-expand-img" [src]="slide.imageSrc" alt="picture-noteworthy" [width]="600" [height]="450">
+    <h4 class="card-text">{{ slide.title }}</h4>
+    <p>{{ slide.description }}</p>
+  </div>-->
+</div>
+<!--<div class="card-body">
+      <div class="card border border-0">
+        <img class="" [src]="slide.imageSrc" alt="picture-noteworthy">
+      </div>
+      <h4 class="card-text">{{ slide.title }}</h4>
+      <p>{{ slide.description }}</p>
+    </div>-->
