@@ -20,6 +20,6 @@ export class HeaderComponent implements OnChanges {
   }
 
   ngOnChanges(): void {
-    console.log('parent message', this.parentActiveSection)
+    // console.log('parent message', this.parentActiveSection)
   }
 }
